@@ -1,0 +1,31 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-3">Esame di Stato</h1>
+    <h3 class="display-4">Corso IoT</h3>
+</div>
+<p></p>
+<p></p>
+<p></p>
+<br />
+<div class="row">
+    @foreach (var p in Model.Modello)
+    {
+        <div class="col-4">
+            <div class="card mb-2 ">
+                <div class="card-body">
+                    <h5 class="card-title">@p.Name</h5>
+                
+
+                    <p>SentDate: @p.SentDate.ToString("dd/MM/yyyy HH:mm:ss")</p>
+                    Message: @p.Message<br />
+
+                </div>
+            </div>
+        </div>
+    }
+</div>
